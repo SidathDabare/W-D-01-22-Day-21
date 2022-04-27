@@ -19,8 +19,20 @@
         height: 100vh;
         gap: 10px;
       }
-      .cell {
-        background-color: #c22177;
+      .colum {
+        display: flex;
+        align-items: stretch;
+        width: 10%;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .miniCells {
+        background-color: rgb(5, 66, 99);
+        width: 100%;
+        justify-content: space-between;
+        color: white;
+        padding: 5px 10px;
+        font-weight: bold;
       }
     </style>
     <title>Extra</title>
@@ -29,18 +41,29 @@
     <div class="mainContainer"></div>
     <script>
       let mainDiv = document.querySelector(".mainContainer");
-
-      console.log(mainDiv);
+      //console.log(mainDiv);
       let newArr = [];
       console.log(newArr);
-      for (let index = 0; index <= 12; index++) {
-        [index];
-      }
-      for (let i = 0; i < newArr.length; i++) {
-        let newColum = document.createElement("div");
-        // newColum.classList.add("cell");
-        // mainDiv.appendChild(newColum);
-        // console.log(newColum);
+      for (let index = 0; index < 12; index++) {
+        let colum = [index];
+        //console.log(colum);
+        let newDiv = document.createElement("div");
+        newDiv.setAttribute("class", "colum");
+        // newDiv.textContent = colum;
+        mainDiv.appendChild(newDiv);
+        newArr.push(newDiv);
+
+        //console.log(newDiv);
+        //console.log(colum);
+        for (let i = 0; i < newArr.length; i++) {
+          let minCell = newArr[i];
+          //console.log(minCell);
+          let newCell = document.createElement("div");
+          newCell.setAttribute("class", "miniCells");
+          newCell.textContent = [i + 1];
+          minCell = newCell;
+          newDiv.appendChild(newCell);
+        }
       }
     </script>
   </body>
