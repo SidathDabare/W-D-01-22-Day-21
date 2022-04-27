@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@700&display=swap");
+      *,
+      ::before,
+      ::after {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Outfit", sans-serif;
+        color: white;
+      }
+      /* ------------layout 01------------- */
+      .layout01 {
+        width: 100%;
+        height: auto;
+        background-color: rgb(142, 142, 142);
+        display: flex;
+        flex-direction: column;
+      }
+      .header {
+        background-color: black;
+        display: flex;
+        height: 15vh;
+        /* flex-grow: 1; */
+        padding: 1rem 1rem;
+      }
+      .container {
+        display: flex;
+        height: 85vh;
+        /* flex-grow: 2; */
+      }
+      .article {
+        background-color: white;
+        flex-grow: 3;
+        color: black;
+        padding: 1rem 1rem;
+      }
+      .aside {
+        background-color: #320388;
+        flex-grow: 1;
+        padding: 1rem 1rem;
+      }
+      .nav {
+        background-color: #c22177;
+        flex-grow: 1;
+        padding: 1rem 1rem;
+      }
+      .footer {
+        background-color: black;
+        display: flex;
+        height: 15vh;
+        /* flex-grow: 1; */
+
+        padding: 1rem 1rem;
+      }
+      @media (max-width: 768px) {
+        .container {
+          display: flex;
+          flex-wrap: wrap;
+          flex-basis: 0;
+          height: 85vh;
+          /* flex-grow: 2; */
+        }
+        .article {
+          background-color: white;
+          flex-grow: 2;
+          order: -1;
+          height: 70vh;
+
+          width: 60vw;
+          color: black;
+          padding: 1rem 1rem;
+        }
+        .aside {
+          background-color: #320388;
+          flex-grow: 1;
+          padding: 1rem 1rem;
+        }
+        .nav {
+          background-color: #c22177;
+          height: 15vh;
+          order: -2;
+          width: 100vw;
+          padding: 1rem 1rem;
+        }
+      }
+      @media (max-width: 400px) {
+        .container {
+          display: flex;
+          flex-wrap: wrap;
+          flex-basis: 0;
+          height: 85vh;
+          /* flex-grow: 2; */
+        }
+        .article {
+          background-color: white;
+          flex-grow: 2;
+          order: -1;
+          height: 55vh;
+
+          width: 100vw;
+          color: black;
+          padding: 1rem 1rem;
+        }
+        .aside {
+          background-color: #320388;
+          flex-grow: 1;
+          height: 15vh;
+          padding: 1rem 1rem;
+        }
+        .nav {
+          background-color: #c22177;
+          height: 15vh;
+          order: -2;
+          width: 100vw;
+          padding: 1rem 1rem;
+        }
+      }
+    </style>
+    <title>FlexBox</title>
+  </head>
+  <body>
+    <!-- layout 01 -->
+    <div class="layout01">
+      <div class="header">Header</div>
+      <div class="container">
+        <div class="aside">Aside</div>
+        <div class="article">Article</div>
+        <div class="nav">Nav</div>
+      </div>
+      <div class="footer">Footer</div>
+    </div>
+  </body>
+</html>

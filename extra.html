@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      *,
+      ::before,
+      ::after {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      .mainContainer {
+        display: flex;
+        /* flex-direction: row; */
+        height: 100vh;
+        gap: 10px;
+      }
+      .cell {
+        background-color: #c22177;
+      }
+    </style>
+    <title>Extra</title>
+  </head>
+  <body>
+    <div class="mainContainer"></div>
+    <script>
+      let mainDiv = document.querySelector(".mainContainer");
+
+      console.log(mainDiv);
+      let newArr = [];
+      console.log(newArr);
+      for (let index = 0; index <= 12; index++) {
+        [index];
+      }
+      for (let i = 0; i < newArr.length; i++) {
+        let newColum = document.createElement("div");
+        // newColum.classList.add("cell");
+        // mainDiv.appendChild(newColum);
+        // console.log(newColum);
+      }
+    </script>
+  </body>
+</html>
